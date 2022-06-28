@@ -34,7 +34,7 @@ public class ArrayListDemo {
         System.out.println("names=" + Arrays.toString(names));               
         
         ArrayList<String> moreFriends = new ArrayList<>(List.of(names));
-        System.out.println("moreFriends=" + moreFriends);         
+        System.out.println("moreFriends=" + moreFriends);
         
         Collections.reverse(friends);
         System.out.println("After reversing, friends=" + friends);

@@ -6,7 +6,8 @@ public class VariableDemo {
     public static final int DAYS_PER_YEAR = 365;
     
     enum Weekday { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY };
-    
+    enum State { ENABLED, DISABLE, PENDING }
+
     public static void main(String[] args) {
         int total = 0;
         int i = 0, count;
@@ -19,6 +20,9 @@ public class VariableDemo {
         final int DAYS_PER_WEEK = 7;
         Weekday startDay = Weekday.MONDAY;
         // count가 초기화되지 않았으므로 다음 줄의 주석을 해제하면 오류가 일어난다.
-        // System.out.println(count); 
+        // System.out.println(count);
+
+        State state = State.ENABLED;
+        System.out.println(state);
     }
 }

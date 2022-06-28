@@ -14,10 +14,10 @@ public class StringDemo {
         
         System.out.println("Next year, you will be " + age + 1); // 오류
         System.out.println("Next year, you will be " + (age + 1)); // Ok
-        
+
         String names = String.join(", ", "Peter", "Paul", "Mary");
         System.out.println(names);
-        
+
         // 문자열 빌더
         
         StringBuilder builder = new StringBuilder();
@@ -28,7 +28,7 @@ public class StringDemo {
         String result = builder.toString();
         System.out.println(result.substring(0, 200) + "...");
         System.out.println(result.length());
-        
+
         // 부분 문자열
         
         greeting = "Hello, World!";
@@ -40,29 +40,38 @@ public class StringDemo {
         System.out.println(location.equals("World"));
         System.out.println(location == "World");
         System.out.println(location.equalsIgnoreCase("world"));
+        System.out.println(location.equalsIgnoreCase("Hello"));
         System.out.println("word".compareTo("world"));
+        System.out.println("world".compareTo("world"));
+        System.out.println("world".compareTo("word"));
 
         // 숫자와 문자열 간 변환
         int n = 42;
+        System.out.println(Integer.toString(n));
         String str = Integer.toString(n, 2);
         System.out.println(str);
-        
+
+
         n = Integer.parseInt(str);
         System.out.println(n);
         n = Integer.parseInt(str, 2);
         System.out.println(n);
-        double x = Double.parseDouble("3.14"); 
+        double x = Double.parseDouble("3.14");
         System.out.println(x);
-        
+
+        System.out.println("Hello".startsWith("He"));
+        System.out.println("Hello".endsWith("lo"));
+        System.out.println("Hello".endsWith("he"));
+        System.out.println("Hello".contains("h"));
         System.out.println(greeting.toUpperCase());
         System.out.println(greeting); // greeting은 변경되지 않았다.
-        
+
         // 유니코드
         String javatm = "Java\u2122";
         System.out.println(javatm);
         System.out.println(Arrays.toString(javatm.codePoints().toArray()));
         System.out.println(javatm.length());
-        
+
         String octonions = "\ud835\udd46";
         System.out.println(octonions);
         System.out.println(Arrays.toString(octonions.codePoints().toArray()));

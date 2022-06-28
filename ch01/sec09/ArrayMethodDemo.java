@@ -13,7 +13,12 @@ public class ArrayMethodDemo {
         if (values.length == 0) return new int[0];
         else return new int[] { values[0], values[values.length - 1] };
     }
-    
+
+    public static int[] firstLastPractice(int[] values) {
+        if (values.length == 0) return new int[0];
+        else return new int[] { values[0], values[values.length - 1] };
+    }
+
     public static void main(String[] args) {
         int[] fibs = { 1, 1, 2, 3, 5, 8, 11, 13 };
         swap(fibs, 2, fibs.length - 2);

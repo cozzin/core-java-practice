@@ -5,14 +5,26 @@ public class VarargsDemo {
         double sum = 0;
         for (double v : values) sum += v;
         return values.length == 0 ? 0 : sum / values.length;
-    }    
+    }
+
+    public static double averagePractice(double... values) {
+        double sum = 0;
+        for (double v : values) sum += v;
+        return values.length == 0 ? 0 : sum / values.length;
+    }
     
     public static double max(double first, double... rest) {
         double result = first;
         for (double v : rest) result = Math.max(v, result);
         return result;
     }
-    
+
+    public static double maxPractice(double first, double... rest) {
+        double result = first;
+        for (double v : rest) result = Math.max(v, result);
+        return result;
+    }
+
     public static void main(String[] args) {
         int n = 42;
         System.out.printf("%d\n", n);
